@@ -1,0 +1,374 @@
+[
+  {
+    "id": "headphones",
+    "name": "Headphones",
+    "imageSrc": "/showroom/headphones.webp",
+    "note": "Explore the products around you",
+    "neighbors": [
+      {
+        "targetId": "bottles",
+        "direction": "left",
+        "label": "Bottles"
+      },
+      {
+        "targetId": "luggage",
+        "direction": "right",
+        "label": "Luggage & bags"
+      }
+    ],
+    "productHotspots": [
+      {
+        "id": "headphones-1",
+        "productId": "walnut-headphones",
+        "xPercent": 19.7,
+        "yPercent": 56,
+        "widthPercent": 6,
+        "heightPercent": 18
+      },
+      {
+        "id": "headphones-2",
+        "productId": "headphones",
+        "xPercent": 25.5,
+        "yPercent": 52,
+        "widthPercent": 5,
+        "heightPercent": 15
+      },
+      {
+        "id": "headphones-3",
+        "productId": "gold-trim-headphones",
+        "xPercent": 93.5,
+        "yPercent": 54,
+        "widthPercent": 6,
+        "heightPercent": 23
+      },
+      {
+        "id": "headphones-4",
+        "productId": "compact-headphones",
+        "xPercent": 84.5,
+        "yPercent": 49,
+        "widthPercent": 4,
+        "heightPercent": 19
+      }
+    ]
+  },
+  {
+    "id": "luggage",
+    "name": "Luggage & bags",
+    "imageSrc": "/showroom/luggage.webp",
+    "note": "Explore the products around you",
+    "neighbors": [
+      {
+        "targetId": "headphones",
+        "direction": "left",
+        "label": "Headphones"
+      },
+      {
+        "targetId": "shoes",
+        "direction": "right",
+        "label": "Shoes"
+      }
+    ],
+    "productHotspots": [
+      {
+        "id": "luggage-1",
+        "productId": "school-backpack",
+        "xPercent": 27.5,
+        "yPercent": 53.5,
+        "widthPercent": 4,
+        "heightPercent": 13
+      },
+      {
+        "id": "luggage-2",
+        "productId": "weekender-duffel",
+        "xPercent": 22,
+        "yPercent": 51,
+        "widthPercent": 5,
+        "heightPercent": 15
+      },
+      {
+        "id": "luggage-3",
+        "productId": "commuter-briefcase",
+        "xPercent": 32.8,
+        "yPercent": 51,
+        "widthPercent": 4,
+        "heightPercent": 10
+      }
+    ]
+  },
+  {
+    "id": "shoes",
+    "name": "Shoes",
+    "imageSrc": "/showroom/shoes.webp",
+    "note": "Explore the products around you",
+    "neighbors": [
+      {
+        "targetId": "luggage",
+        "direction": "left",
+        "label": "Luggage & bags"
+      },
+      {
+        "targetId": "toys",
+        "direction": "right",
+        "label": "Toys"
+      }
+    ],
+    "productHotspots": [
+      {
+        "id": "shoes-1",
+        "productId": "running-shoes",
+        "xPercent": 19.7,
+        "yPercent": 60.5,
+        "widthPercent": 7,
+        "heightPercent": 8
+      },
+      {
+        "id": "shoes-2",
+        "productId": "olive-walking-shoes",
+        "xPercent": 80.5,
+        "yPercent": 59,
+        "widthPercent": 6,
+        "heightPercent": 9
+      },
+      {
+        "id": "shoes-3",
+        "productId": "white-court-sneakers",
+        "xPercent": 85.2,
+        "yPercent": 47.5,
+        "widthPercent": 5,
+        "heightPercent": 7
+      }
+    ]
+  },
+  {
+    "id": "toys",
+    "name": "Toys",
+    "imageSrc": "/showroom/toys.webp",
+    "note": "Explore the products around you",
+    "neighbors": [
+      {
+        "targetId": "shoes",
+        "direction": "left",
+        "label": "Shoes"
+      },
+      {
+        "targetId": "lunch-boxes",
+        "direction": "right",
+        "label": "Lunch boxes"
+      }
+    ],
+    "productHotspots": [
+      {
+        "id": "toys-1",
+        "productId": "toy-car",
+        "xPercent": 72.2,
+        "yPercent": 52,
+        "widthPercent": 3,
+        "heightPercent": 5
+      },
+      {
+        "id": "toys-2",
+        "productId": "wooden-safari-van",
+        "xPercent": 83,
+        "yPercent": 53,
+        "widthPercent": 4,
+        "heightPercent": 7
+      },
+      {
+        "id": "toys-3",
+        "productId": "yellow-toy-truck",
+        "xPercent": 85.3,
+        "yPercent": 39,
+        "widthPercent": 4,
+        "heightPercent": 6
+      },
+      {
+        "id": "toys-teddy-bear",
+        "productId": "teddy-bear",
+        "xPercent": 15.2,
+        "yPercent": 56.8,
+        "widthPercent": 5.8,
+        "heightPercent": 13
+      },
+      {
+        "id": "toys-plush-elephant",
+        "productId": "plush-elephant",
+        "xPercent": 19.1,
+        "yPercent": 46.8,
+        "widthPercent": 5,
+        "heightPercent": 13
+      },
+      {
+        "id": "toys-plush-lion",
+        "productId": "plush-lion",
+        "xPercent": 24,
+        "yPercent": 54,
+        "widthPercent": 6,
+        "heightPercent": 15
+      },
+      {
+        "id": "toys-rainbow-stacker",
+        "productId": "rainbow-stacker",
+        "xPercent": 75.8,
+        "yPercent": 52.2,
+        "widthPercent": 4.8,
+        "heightPercent": 7
+      },
+      {
+        "id": "toys-stacking-rings",
+        "productId": "stacking-rings",
+        "xPercent": 85.7,
+        "yPercent": 52,
+        "widthPercent": 3,
+        "heightPercent": 9
+      }
+    ]
+  },
+  {
+    "id": "lunch-boxes",
+    "name": "Lunch boxes",
+    "imageSrc": "/showroom/lunch-boxes.webp",
+    "note": "Explore the products around you",
+    "neighbors": [
+      {
+        "targetId": "toys",
+        "direction": "left",
+        "label": "Toys"
+      },
+      {
+        "targetId": "books",
+        "direction": "right",
+        "label": "Books"
+      }
+    ],
+    "productHotspots": [
+      {
+        "id": "lunch-boxes-1",
+        "productId": "lunch-box",
+        "xPercent": 16,
+        "yPercent": 66,
+        "widthPercent": 6,
+        "heightPercent": 7
+      },
+      {
+        "id": "lunch-boxes-2",
+        "productId": "cream-bento",
+        "xPercent": 20.8,
+        "yPercent": 61,
+        "widthPercent": 5,
+        "heightPercent": 6
+      },
+      {
+        "id": "lunch-boxes-3",
+        "productId": "navy-lunch-box",
+        "xPercent": 89.8,
+        "yPercent": 64,
+        "widthPercent": 5,
+        "heightPercent": 8
+      },
+      {
+        "id": "lunch-boxes-4",
+        "productId": "pink-lunch-box",
+        "xPercent": 32.3,
+        "yPercent": 53.5,
+        "widthPercent": 3,
+        "heightPercent": 5
+      }
+    ]
+  },
+  {
+    "id": "books",
+    "name": "Books",
+    "imageSrc": "/showroom/books.webp",
+    "note": "Explore the products around you",
+    "neighbors": [
+      {
+        "targetId": "lunch-boxes",
+        "direction": "left",
+        "label": "Lunch boxes"
+      },
+      {
+        "targetId": "bottles",
+        "direction": "right",
+        "label": "Bottles"
+      }
+    ],
+    "productHotspots": [
+      {
+        "id": "books-1",
+        "productId": "book",
+        "xPercent": 53.5,
+        "yPercent": 59,
+        "widthPercent": 4,
+        "heightPercent": 15
+      },
+      {
+        "id": "books-2",
+        "productId": "everyday-cookbook",
+        "xPercent": 56.5,
+        "yPercent": 64,
+        "widthPercent": 6,
+        "heightPercent": 5
+      },
+      {
+        "id": "books-3",
+        "productId": "red-sketchbook",
+        "xPercent": 63.2,
+        "yPercent": 57.5,
+        "widthPercent": 4,
+        "heightPercent": 3.5
+      }
+    ]
+  },
+  {
+    "id": "bottles",
+    "name": "Bottles",
+    "imageSrc": "/showroom/bottles.webp",
+    "note": "Explore the products around you",
+    "neighbors": [
+      {
+        "targetId": "books",
+        "direction": "left",
+        "label": "Books"
+      },
+      {
+        "targetId": "headphones",
+        "direction": "right",
+        "label": "Headphones"
+      }
+    ],
+    "productHotspots": [
+      {
+        "id": "bottles-1",
+        "productId": "water-bottle",
+        "xPercent": 20.3,
+        "yPercent": 58,
+        "widthPercent": 2.3,
+        "heightPercent": 10
+      },
+      {
+        "id": "bottles-2",
+        "productId": "steel-bottle",
+        "xPercent": 22.5,
+        "yPercent": 58,
+        "widthPercent": 2.3,
+        "heightPercent": 10
+      },
+      {
+        "id": "bottles-3",
+        "productId": "navy-insulated-bottle",
+        "xPercent": 90.8,
+        "yPercent": 59.8,
+        "widthPercent": 2.7,
+        "heightPercent": 19
+      },
+      {
+        "id": "bottles-4",
+        "productId": "black-sports-bottle",
+        "xPercent": 98,
+        "yPercent": 63,
+        "widthPercent": 3,
+        "heightPercent": 19
+      }
+    ]
+  }
+]

@@ -1,0 +1,422 @@
+{
+  "school-backpack": [
+    {
+      "label": "Front",
+      "src": "/products/school-backpack.webp"
+    },
+    {
+      "label": "Side",
+      "src": "/products/gallery-v1/school-backpack-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/gallery-v1/school-backpack-rear.png"
+    }
+  ],
+  "running-shoes": [
+    {
+      "label": "Front",
+      "src": "/products/running-shoes.webp"
+    },
+    {
+      "label": "Side",
+      "src": "/products/gallery-v1/running-shoes-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/gallery-v1/running-shoes-rear.png"
+    }
+  ],
+  "water-bottle": [
+    {
+      "label": "Front",
+      "src": "/products/water-bottle.webp"
+    },
+    {
+      "label": "Side",
+      "src": "/products/gallery-v1/water-bottle-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/gallery-v1/water-bottle-rear.png"
+    }
+  ],
+  "book": [
+    {
+      "label": "Front",
+      "src": "/products/book.webp"
+    },
+    {
+      "label": "Side",
+      "src": "/products/gallery-v1/book-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/gallery-v1/book-rear.png"
+    }
+  ],
+  "toy-car": [
+    {
+      "label": "Front",
+      "src": "/products/toy-car.webp"
+    },
+    {
+      "label": "Side",
+      "src": "/products/gallery-v1/toy-car-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/gallery-v1/toy-car-rear.png"
+    }
+  ],
+  "football": [
+    {
+      "label": "Front",
+      "src": "/products/football.webp"
+    },
+    {
+      "label": "Side",
+      "src": "/products/gallery-v1/football-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/gallery-v1/football-rear.png"
+    }
+  ],
+  "headphones": [
+    {
+      "label": "Front",
+      "src": "/products/headphones.webp"
+    },
+    {
+      "label": "Side",
+      "src": "/products/gallery-v1/headphones-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/gallery-v1/headphones-rear.png"
+    }
+  ],
+  "lunch-box": [
+    {
+      "label": "Front",
+      "src": "/products/lunch-box.webp"
+    },
+    {
+      "label": "Side",
+      "src": "/products/gallery-v1/lunch-box-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/gallery-v1/lunch-box-rear.png"
+    }
+  ],
+  "teddy-bear": [
+    {
+      "label": "Front",
+      "src": "/products/gallery-v1/teddy-bear-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/gallery-v1/teddy-bear-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/gallery-v1/teddy-bear-rear.png"
+    }
+  ],
+  "plush-elephant": [
+    {
+      "label": "Front",
+      "src": "/products/gallery-v1/plush-elephant-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/gallery-v1/plush-elephant-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/gallery-v1/plush-elephant-rear.png"
+    }
+  ],
+  "plush-lion": [
+    {
+      "label": "Front",
+      "src": "/products/gallery-v1/plush-lion-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/gallery-v1/plush-lion-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/gallery-v1/plush-lion-rear.png"
+    }
+  ],
+  "rainbow-stacker": [
+    {
+      "label": "Front",
+      "src": "/products/gallery-v1/rainbow-stacker-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/gallery-v1/rainbow-stacker-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/gallery-v1/rainbow-stacker-rear.png"
+    }
+  ],
+  "stacking-rings": [
+    {
+      "label": "Front",
+      "src": "/products/gallery-v1/stacking-rings-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/gallery-v1/stacking-rings-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/gallery-v1/stacking-rings-rear.png"
+    }
+  ],
+  "walnut-headphones": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/walnut-headphones-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/walnut-headphones-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/walnut-headphones-rear.png"
+    }
+  ],
+  "gold-trim-headphones": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/gold-trim-headphones-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/gold-trim-headphones-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/gold-trim-headphones-rear.png"
+    }
+  ],
+  "compact-headphones": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/compact-headphones-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/compact-headphones-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/compact-headphones-rear.png"
+    }
+  ],
+  "weekender-duffel": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/weekender-duffel-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/weekender-duffel-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/weekender-duffel-rear.png"
+    }
+  ],
+  "commuter-briefcase": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/commuter-briefcase-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/commuter-briefcase-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/commuter-briefcase-rear.png"
+    }
+  ],
+  "olive-walking-shoes": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/olive-walking-shoes-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/olive-walking-shoes-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/olive-walking-shoes-rear.png"
+    }
+  ],
+  "white-court-sneakers": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/white-court-sneakers-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/white-court-sneakers-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/white-court-sneakers-rear.png"
+    }
+  ],
+  "wooden-safari-van": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/wooden-safari-van-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/wooden-safari-van-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/wooden-safari-van-rear.png"
+    }
+  ],
+  "yellow-toy-truck": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/yellow-toy-truck-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/yellow-toy-truck-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/yellow-toy-truck-rear.png"
+    }
+  ],
+  "cream-bento": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/cream-bento-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/cream-bento-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/cream-bento-rear.png"
+    }
+  ],
+  "navy-lunch-box": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/navy-lunch-box-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/navy-lunch-box-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/navy-lunch-box-rear.png"
+    }
+  ],
+  "pink-lunch-box": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/pink-lunch-box-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/pink-lunch-box-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/pink-lunch-box-rear.png"
+    }
+  ],
+  "everyday-cookbook": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/everyday-cookbook-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/everyday-cookbook-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/everyday-cookbook-rear.png"
+    }
+  ],
+  "red-sketchbook": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/red-sketchbook-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/red-sketchbook-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/red-sketchbook-rear.png"
+    }
+  ],
+  "steel-bottle": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/steel-bottle-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/steel-bottle-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/steel-bottle-rear.png"
+    }
+  ],
+  "navy-insulated-bottle": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/navy-insulated-bottle-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/navy-insulated-bottle-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/navy-insulated-bottle-rear.png"
+    }
+  ],
+  "black-sports-bottle": [
+    {
+      "label": "Front",
+      "src": "/products/variants-v1/black-sports-bottle-front.png"
+    },
+    {
+      "label": "Side",
+      "src": "/products/variants-v1/black-sports-bottle-side.png"
+    },
+    {
+      "label": "Rear",
+      "src": "/products/variants-v1/black-sports-bottle-rear.png"
+    }
+  ]
+}

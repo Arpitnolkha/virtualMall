@@ -1,0 +1,277 @@
+{
+  "school-backpack": {
+    "src": "/products/school-backpack.webp",
+    "maxWidth": 1.12,
+    "maxHeight": 1.3,
+    "bounds": [
+      0.12630208333333334,
+      0.009114583333333334,
+      0.7981770833333334,
+      0.9713541666666666
+    ]
+  },
+  "running-shoes": {
+    "src": "/products/running-shoes.webp",
+    "maxWidth": 1.45,
+    "maxHeight": 0.85,
+    "bounds": [
+      0.013020833333333334,
+      0.1484375,
+      0.984375,
+      0.73046875
+    ]
+  },
+  "water-bottle": {
+    "src": "/products/water-bottle.webp",
+    "maxWidth": 0.6,
+    "maxHeight": 1.18,
+    "bounds": [
+      0.3645833333333333,
+      0.0390625,
+      0.2734375,
+      0.92578125
+    ]
+  },
+  "book": {
+    "src": "/products/book.webp",
+    "maxWidth": 0.94,
+    "maxHeight": 1.2,
+    "bounds": [
+      0.18619791666666666,
+      0.041666666666666664,
+      0.6458333333333334,
+      0.94140625
+    ]
+  },
+  "toy-car": {
+    "src": "/products/toy-car.webp",
+    "maxWidth": 1.36,
+    "maxHeight": 0.8,
+    "bounds": [
+      0.028645833333333332,
+      0.22265625,
+      0.9635416666666666,
+      0.5598958333333334
+    ]
+  },
+  "football": {
+    "src": "/products/football.webp",
+    "maxWidth": 1.02,
+    "maxHeight": 1.02,
+    "bounds": [
+      0.059895833333333336,
+      0.05859375,
+      0.87890625,
+      0.8932291666666666
+    ]
+  },
+  "headphones": {
+    "src": "/products/headphones.webp",
+    "maxWidth": 1.06,
+    "maxHeight": 1.08,
+    "bounds": [
+      0.14322916666666666,
+      0.06510416666666667,
+      0.7174479166666666,
+      0.8736979166666666
+    ]
+  },
+  "lunch-box": {
+    "src": "/products/lunch-box.webp",
+    "maxWidth": 1.32,
+    "maxHeight": 0.85,
+    "bounds": [
+      0.057291666666666664,
+      0.16276041666666666,
+      0.9075520833333334,
+      0.7109375
+    ]
+  },
+  "walnut-headphones": {
+    "src": "/products/variants-v1/walnut-headphones-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "gold-trim-headphones": {
+    "src": "/products/variants-v1/gold-trim-headphones-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "compact-headphones": {
+    "src": "/products/variants-v1/compact-headphones-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "weekender-duffel": {
+    "src": "/products/variants-v1/weekender-duffel-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "commuter-briefcase": {
+    "src": "/products/variants-v1/commuter-briefcase-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "olive-walking-shoes": {
+    "src": "/products/variants-v1/olive-walking-shoes-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "white-court-sneakers": {
+    "src": "/products/variants-v1/white-court-sneakers-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "wooden-safari-van": {
+    "src": "/products/variants-v1/wooden-safari-van-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "yellow-toy-truck": {
+    "src": "/products/variants-v1/yellow-toy-truck-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "cream-bento": {
+    "src": "/products/variants-v1/cream-bento-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "navy-lunch-box": {
+    "src": "/products/variants-v1/navy-lunch-box-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "pink-lunch-box": {
+    "src": "/products/variants-v1/pink-lunch-box-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "everyday-cookbook": {
+    "src": "/products/variants-v1/everyday-cookbook-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "red-sketchbook": {
+    "src": "/products/variants-v1/red-sketchbook-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "steel-bottle": {
+    "src": "/products/variants-v1/steel-bottle-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "navy-insulated-bottle": {
+    "src": "/products/variants-v1/navy-insulated-bottle-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "black-sports-bottle": {
+    "src": "/products/variants-v1/black-sports-bottle-front.png",
+    "maxWidth": 1.2,
+    "maxHeight": 1.3,
+    "bounds": [
+      0,
+      0,
+      1,
+      1
+    ]
+  }
+}
