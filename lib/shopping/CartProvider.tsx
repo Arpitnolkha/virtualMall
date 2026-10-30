@@ -1,6 +1,6 @@
 'use client';
 import { createContext, useContext, useEffect, useRef, useState } from 'react';
-import { addItem, CART_KEY, cartTotal, emptyCart, itemCount, restoreCart, updateQuantity, type CartState } from './cart';
+import { addItem, CART_KEY, cartTotal, emptyCart, itemCount, updateQuantity, type CartState } from './cart';
 interface CartContextValue {
     state: CartState;
     ready: boolean;
@@ -16,33 +16,19 @@ const Context = createContext<CartContextValue | null>(null);
 export function CartProvider({ children }: {
     children: React.ReactNode;
 }) {
-    const [state, setState] = useState(emptyCart), [ready, setReady] = useState(false), [error, setError] = useState('');
+    // The root provider preserves the cart during client-side navigation only.
+    // A fresh document (including refresh) always starts with an empty cart.
+    const [state, setState] = useState(emptyCart);
     const current = useRef(emptyCart);
+    const ready = true;
+    const error = '';
     useEffect(() => {
-        const load = () => { try {
-            current.current = restoreCart(localStorage.getItem(CART_KEY));
-            setState(current.current);
-        }
-        catch {
-            setError('Cart storage is unavailable. Please allow local storage.');
-        } setReady(true); };
-        load();
-        const changed = (event: StorageEvent) => { if (event.key === CART_KEY)
-            load(); };
-        window.addEventListener('storage', changed);
-        return () => window.removeEventListener('storage', changed);
+        // Remove carts saved by older versions; storage is no longer required.
+        try { localStorage.removeItem(CART_KEY); } catch { /* Browsing works without storage. */ }
     }, []);
     const commit = (next: CartState) => {
-        try {
-            localStorage.setItem(CART_KEY, JSON.stringify(next));
-            current.current = next;
-            setState(next);
-            setError('');
-        }
-        catch {
-            setError('Your cart could not be saved. Please allow local storage and try again.');
-            throw new Error('Cart could not be saved.');
-        }
+        current.current = next;
+        setState(next);
     };
     return <Context.Provider value={{ state, ready, error, count: itemCount(state), total: cartTotal(state),
             add: (id, q, key) => commit(addItem(current.current, id, q, key)), update: (id, q) => commit(updateQuantity(current.current, id, q)),

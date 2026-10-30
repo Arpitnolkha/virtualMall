@@ -62,11 +62,18 @@ export function decide(flow: ShoppingFlow, text: string): {
     const t = text.toLowerCase().replace(/[’']/g, "'").trim();
     const next = { ...flow, language: languageOf(t, flow.language) };
     const result = (action: ShopAction | null) => ({ flow: next, action });
-    const later = /\b(later|tomorrow|schedule|scheduled|evening|afternoon|morning|tonight|next week|next month|not now|monday|tuesday|wednesday|thursday|friday|saturday|sunday)\b|\b\d{4}-\d{2}-\d{2}\b|\bat\s+\d{1,2}(?::\d{2})?\b|\bin\s+\d+\s+(?:minutes?|hours?|days?)\b|बाद|कल|शाम|baad|kal/u.test(t);
+    // A rejected future option is not a request to schedule (e.g. "not later, connect me").
+    const requestText = t.replace(/\b(?:not later|(?:don't|do not)\s+(?:want to\s+)?(?:schedule|book)(?:\s+(?:a\s+)?(?:call|callback|meeting))?|no scheduling)\b/g, '').trim();
+    const later = /\b(later|tomorrow|schedule|scheduled|evening|afternoon|morning|tonight|next week|next month|not now|monday|tuesday|wednesday|thursday|friday|saturday|sunday)\b|\b\d{4}-\d{2}-\d{2}\b|\bat\s+\d{1,2}(?::\d{2})?\b|\bin\s+\d+\s+(?:minutes?|hours?|days?)\b|बाद|कल|शाम|baad|kal/u.test(requestText);
     const now = /\b(now|immediately|instantly|right away|straight away|abhi)\b|अभी/u.test(t) && !later && !/\b(?:not|don't|do not)\s+(?:want\s+(?:it\s+)?)?(?:instantly|immediately|right away|now)\b/u.test(t);
-    const declined = /\b(?:don't|do not|no need|not interested|if|example)\b|नहीं/u.test(t);
+    const declined = /\b(?:don't|do not|no need|not interested|not now|not instantly|not immediately|if|example)\b|नहीं/u.test(requestText);
     const callRequest = !declined && /\b(?:(?:want|like|need)(?:\s+to\s+(?:have|start|join|make|get|arrange))?\s+(?:a |an |the )?(?:video |phone )?(?:call|meeting|callback)|(?:have|start|join|arrange|request|make|set up)\s+(?:a |an |the )?(?:video |phone )?(?:call|meeting|callback)|(?:call|phone|ring) me|(?:can|could|may) (?:we|i)\s+(?:have a |start a |join a )?(?:call|meet)|let'?s\s+(?:have a |start a )?(?:call|meet))\b|^(?:a )?(?:video call|call|meeting|callback)[.!?\s]*$|(?:call|meeting).{0,15}(?:chahiye|karo|kijiye)|कॉल.{0,15}(?:चाहिए|करें|करो)/u.test(t);
-    const human = !declined && /\b(?:(?:speak|talk|connect|chat|meet|transfer|contact|help).{0,25}(?:human|person|someone|team|representative|specialist|support|agent)|(?:want|need|like)(?:\s+to\s+(?:speak|talk|connect))?.{0,18}(?:human|representative|specialist|support agent))\b|(?:इंसान|व्यक्ति|टीम|प्रतिनिधि).{0,25}(?:बात|मदद|जोड़)|^(?:human(?: agent)?(?: help| please| now| se connect karo)?|customer support|live agent|representative|specialist|support|team help)[.!?\s]*$/u.test(t);
+    const directConnect = !declined && (
+        /\b(?:connect|transfer|put)\s+(?:me|us)(?:\s+through)?\b|\b(?:can|could|may|shall)\s+we\s+connect\b|\blet'?s\s+connect\b|\b(?:want|need|like)\s+to\s+connect\b|^(?:please\s+)?connect(?:\s+(?:now|instantly|immediately|please))?[.!?\s]*$|\bconnect\s+(?:karo|kar do|kijiye)\b|कनेक्ट\s*(?:करो|करें|कीजिए)/u.test(requestText)
+        || /^(?:(?:yes|okay|ok|please)[,!.\s]+)*(?:right now|now|instantly|immediately|right away|straight away|abhi|अभी)(?:[,!.\s]+please)?[.!?\s]*$/u.test(requestText)
+        || /^i\s+(?:want|need|would like)\s+(?:to have\s+)?(?:it|that)(?:\s+to happen)?\s+(?:right now|now|instantly|immediately)[.!?\s]*$/u.test(requestText)
+    );
+    const human = directConnect || !declined && /\b(?:(?:speak|talk|connect|chat|meet|transfer|contact|help).{0,25}(?:human|person|someone|team|representative|specialist|support|agent)|(?:want|need|like)(?:\s+to\s+(?:speak|talk|connect))?.{0,18}(?:human|representative|specialist|support agent))\b|(?:इंसान|व्यक्ति|टीम|प्रतिनिधि).{0,25}(?:बात|मदद|जोड़)|^(?:human(?: agent)?(?: help| please| now| se connect karo)?|customer support|live agent|representative|specialist|support|team help)[.!?\s]*$/u.test(t);
     const meetingLink = /\b(?:meeting|call|video call|waiting room)\s+(?:link|url)\b|(?:मीटिंग|कॉल).{0,12}लिंक/u.test(t)
         && !/\b(?:what is|what's|how does|if|example|don't|do not|no need)\b|नहीं/u.test(t);
     const callbackRequest = /\b(?:schedule|book|arrange|request).{0,24}(?:call|callback|meeting)\b|\bcall(?:back)?\s+(?:me\s+)?(?:later|tomorrow)\b/u.test(t)
@@ -86,7 +93,7 @@ export function decide(flow: ShoppingFlow, text: string): {
         return result({ type: 'CONTINUE_EXPLORING' });
     }
     // An immediate choice replaces an unfinished callback, even without human keywords.
-    if (next.handoff === 'SCHEDULE_REQUESTED' && now) {
+    if (['SCHEDULE_REQUESTED', 'AWAITING_TIMING_CHOICE', 'FAILED'].includes(next.handoff) && now) {
         next.phase = 'PRODUCT_EXPLORATION';
         next.handoff = 'INSTANT_REQUESTED';
         return result({ type: 'CREATE_INSTANT_HANDOFF' });

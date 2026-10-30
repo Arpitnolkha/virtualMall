@@ -61,3 +61,20 @@ test('explicit future call requests still schedule and unrelated speech does not
  for(const text of ['Do these headphones support calls?','What is the call quality?','I do not want a call','If I want a call','I do not want to speak to a human'])
   assert.notEqual(decide(initialFlow,text).action?.type,'CREATE_INSTANT_HANDOFF',text);
 });
+
+test('direct connection and immediate replies create meetings without an armed timing choice',()=>{
+ for(const text of ['Connect me','Please connect me right now','Can we connect?','Let us connect me to someone','I want to connect','Connect please','Right now','Instantly','Immediately please','I want it instantly','I want to have it instantly','Connect karo','अभी','कनेक्ट करो','Not later, connect me','Do not schedule a call, connect me now']) {
+  for(const handoff of ['NONE','SCHEDULE_REQUESTED','AWAITING_TIMING_CHOICE','FAILED']) {
+   const result=decide({...initialFlow,handoff,productId:'headphones'},text);
+   assert.equal(result.action?.type,'CREATE_INSTANT_HANDOFF',`${handoff}: ${text}`);
+   assert.equal(result.flow.productId,'headphones');
+   assert.equal(decide(result.flow,text).action,null);
+  }
+ }
+});
+test('connection timing keeps explicit future requests and rejects product or declined connections',()=>{
+ for(const text of ['Connect me later','Connect me tomorrow','Can we connect on Friday?','Connect me at 10:30'])
+  assert.equal(decide(initialFlow,text).action?.type,'START_SCHEDULE_HANDOFF',text);
+ for(const text of ['How do these headphones connect?','Does it connect instantly?','Connect the headphones to my phone',"Do not connect me",'Not now','Not instantly','If I want to connect','I want to buy it now'])
+  assert.notEqual(decide(initialFlow,text).action?.type,'CREATE_INSTANT_HANDOFF',text);
+});
