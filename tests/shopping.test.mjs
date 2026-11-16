@@ -31,7 +31,7 @@ test('duplicate event cannot double add; repeated legitimate additions merge; co
  assert.throws(()=>addItem(b,'headphones',99,'c'));assert.throws(()=>updateQuantity(b,'headphones',0));
 });
 test('handoff defaults to immediate; explicit later schedules; discounts still offer help',()=>{
- for(const text of ['Connect me with a human','I want to talk to someone','मुझे किसी इंसान से बात करनी है','Human agent se connect karo']){const r=decide(selected,text);assert.equal(r.action.type,'CREATE_INSTANT_HANDOFF');assert.equal(r.flow.handoff,'INSTANT_REQUESTED');}
+ for(const text of ['Connect me with a human','I want to talk to someone','मुझे किसी इंसान से बात करनी है','Human agent se connect karo']){const r=decide(selected,text);assert.equal(r.action.type,'OFFER_HUMAN_HANDOFF');assert.equal(r.flow.handoff,'AWAITING_TIMING_CHOICE');}
  assert.equal(decide(selected,'Connect me with a human now').action.type,'CREATE_INSTANT_HANDOFF');assert.equal(decide(selected,'Can I speak with someone tomorrow?').action.type,'START_SCHEDULE_HANDOFF');assert.equal(decide(selected,"Don't connect me to a human now").action.code,'cancel');
  const priced=decide(selected,'Thoda discount mil sakta hai?');assert.equal(priced.action.type,'OFFER_HUMAN_HANDOFF');assert.equal(priced.flow.reason,'pricing');assert.equal(priced.flow.language,'hinglish');assert.equal(decide(priced.flow,'अभी').action.type,'CREATE_INSTANT_HANDOFF');
 });

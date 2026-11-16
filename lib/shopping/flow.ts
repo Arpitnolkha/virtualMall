@@ -111,7 +111,7 @@ export function decide(flow: ShoppingFlow, text: string): {
             next.handoff = 'SCHEDULE_REQUESTED';
             return result({ type: 'START_SCHEDULE_HANDOFF', text });
         }
-        if (now || meetingLink || human || callRequest || callbackRequest) {
+        if (now || meetingLink) {
             next.handoff = 'INSTANT_REQUESTED';
             return result({ type: 'CREATE_INSTANT_HANDOFF' });
         }
