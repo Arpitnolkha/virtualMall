@@ -12,6 +12,7 @@ import {
   type AgentSession,
 } from "agora-agents";
 import { configuration, requireConfiguration } from "./config";
+import { showroomTurnDetection } from "./speechConfig";
 import { products } from "@/lib/mall/products";
 import { productIntroduction, systemMessages } from "@/lib/mall/productPayload";
 const TTL = 30 * 60 * 1000;
@@ -116,7 +117,7 @@ export async function startAgent(e: SessionEntry) {
     });
     let agent = new Agent({
       client,
-      turnDetection: { language: "en-US" },
+      turnDetection: showroomTurnDetection,
       interruption: { enable: true, mode: "start_of_speech" },
       advancedFeatures: { enable_rtm: false },
       parameters: { data_channel: "datastream", opt_out: true },

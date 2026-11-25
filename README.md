@@ -25,7 +25,7 @@ ARES is the speech recognizer. LLM access uses Agora-managed credentials and the
 
 Restart Next.js after filling credentials. Select any product to start Maya automatically. Allow microphone access if prompted; Maya introduces herself and briefly describes your selection. Later product clicks update the same voice session. Mute, End and retry controls remain available.
 
-Credentials stay server-side. `.env.local` is ignored; do not commit populated secrets. Provider accounts and usage are external to this demo. This implementation uses the US Agora service area, English ASR, and a maximum 30-minute session.
+Credentials stay server-side. `.env.local` is ignored; do not commit populated secrets. Provider accounts and usage are external to this demo. This implementation uses the US Agora service area, English/Hindi ASR (`en-IN,hi-IN`) with VAD end-of-speech detection, and a maximum 30-minute session.
 
 For diagnostic timings open [/mall?debugLatency=true](http://127.0.0.1:3015/mall?debugLatency=true). Provider-internal LLM and TTS timings are deliberately shown as unavailable when not observable over the chosen RTC transport.
 
@@ -45,3 +45,7 @@ See [PASS2.md](./PASS2.md) for the integration architecture, all 31 requested re
 Sessions, meeting rooms and callback requests are process-local for this standalone demo and reset when the server restarts. Callback confirmation records a demo request; it does not create a calendar booking, send reminders, or dispatch a representative. Checkout does not place a real order.
 
 The session registry is process-local for this standalone demo. A multi-instance deployment needs shared session coordination and application authentication before public use.
+
+## Multilingual speech verification
+
+ARES uses the English/Hindi language list configured in `lib/server/speechConfig.ts`. The SDK serializes this list into `asr.language`; Hinglish has no separate language tag. This requires Agora Agents SDK 2.15.0. Murf voice configuration is unchanged. Mixed-language recognition and spoken response quality still require a live microphone test.
